@@ -1,0 +1,8 @@
+pandas
+numpy
+python-dotenv
+requests
+alpaca-trade-api
+matplotlib
+yfinance
+tqdm
