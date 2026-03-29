@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nifty 50 Strategy Performance Report</title>
+    <title>Nifty 50 Options Strategy Performance Report</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,7 +14,7 @@
             color: #fff;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         h1 {
@@ -29,14 +29,6 @@
             color: #888;
             margin-bottom: 40px;
             font-size: 1.1em;
-        }
-        .report-image {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 20px;
         }
         .metrics-grid {
             display: grid;
@@ -89,6 +81,7 @@
             background: rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             overflow: hidden;
+            font-size: 0.95em;
         }
         th, td {
             padding: 15px;
@@ -105,6 +98,7 @@
         }
         .win { color: #00ff88; }
         .loss { color: #ff4757; }
+        .neutral { color: #ffa500; }
         .summary-box {
             background: linear-gradient(145deg, #0f3460, #1a1a2e);
             border-radius: 15px;
@@ -124,7 +118,7 @@
         }
         .strategy-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
@@ -144,51 +138,61 @@
             color: #fff;
             font-weight: 600;
         }
+        .chart-section {
+            text-align: center;
+        }
+        .chart-section img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            background: #fff;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 NIFTY 50 STRATEGY PERFORMANCE REPORT</h1>
-        <p class="subtitle">Volume Profile Breakout Strategy | Nifty BeES ETF | Jan 2022 - Mar 2026</p>
+        <h1>📊 NIFTY 50 OPTIONS STRATEGY PERFORMANCE REPORT</h1>
+        <p class="subtitle">Volume Profile Breakout Strategy | NIFTYBEES.NS | 2025-03-29 to 2026-03-29</p>
 
         <div class="summary-box">
             <h3>Total Return</h3>
-            <div class="summary-value negative">-1.03%</div>
-            <p style="margin-top: 10px; color: #888;">₹100,000 → ₹98,974</p>
+            <div class="summary-value positive">28.54%</div>
+            <p style="margin-top: 10px; color: #888;">₹100,000 → ₹128,545</p>
         </div>
 
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-label">Total Trades</div>
-                <div class="metric-value neutral">9</div>
+                <div class="metric-value neutral">6</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Win Rate</div>
-                <div class="metric-value negative">11.1%</div>
+                <div class="metric-value negative">33.3%</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Profit Factor</div>
-                <div class="metric-value negative">0.35</div>
+                <div class="metric-value positive">4.43</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Max Drawdown</div>
-                <div class="metric-value negative">-1.38%</div>
+                <div class="metric-value negative">-3.69%</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Sharpe Ratio</div>
-                <div class="metric-value negative">-0.65</div>
+                <div class="metric-value positive">1.59</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Avg Win / Avg Loss</div>
                 <div class="metric-value" style="font-size: 1.3em;">
-                    <span class="positive">₹554</span> / <span class="negative">₹198</span>
+                    <span class="positive">₹10896</span> / <span class="negative">₹4923</span>
                 </div>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section chart-section">
             <h2>📈 Performance Chart</h2>
-            <img src="nifty_performance_report.png" alt="Performance Report Chart" class="report-image">
+            <img src="nifty_options_report.png" alt="Performance Report Chart">
         </div>
 
         <div class="section">
@@ -196,11 +200,11 @@
             <div class="strategy-info">
                 <div class="info-item">
                     <div class="info-label">Instrument</div>
-                    <div class="info-value">Nifty BeES ETF</div>
+                    <div class="info-value">NIFTYBEES.NS</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Period</div>
-                    <div class="info-value">2022-2026</div>
+                    <div class="info-value">2025-03-29</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">VP Lookback</div>
@@ -212,19 +216,19 @@
                 </div>
                 <div class="info-item">
                     <div class="info-label">Risk/Reward</div>
-                    <div class="info-value">1:3</div>
+                    <div class="info-value">1:3.0</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Stop Loss</div>
-                    <div class="info-value">2%</div>
+                    <div class="info-value">2.0%</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Position Size</div>
-                    <div class="info-value">10%</div>
+                    <div class="info-value">20.0%</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Initial Capital</div>
-                    <div class="info-value">₹1,00,000</div>
+                    <div class="info-value">₹100,000</div>
                 </div>
             </div>
         </div>
@@ -237,71 +241,109 @@
                         <th>#</th>
                         <th>Date</th>
                         <th>Type</th>
-                        <th>Entry</th>
-                        <th>Exit</th>
+                        <th>Underlying Entry</th>
+                        <th>Underlying Exit</th>
+                        <th>Option Entry</th>
+                        <th>Option Exit</th>
                         <th>P&L (₹)</th>
                         <th>Outcome</th>
                     </tr>
                 </thead>
-                <tbody id="trade-log">
-                    <!-- Will be populated by JavaScript -->
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>2025-06-23</td>
+                        <td style="color: #00ff88">LONG CE</td>
+                        <td>₹24939.75</td>
+                        <td>₹24971.90</td>
+                        <td>₹199.52</td>
+                        <td>₹215.95</td>
+                        <td class="positive">+₹1643.58</td>
+                        <td class="neutral">EXIT</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2025-06-30</td>
+                        <td style="color: #00ff88">LONG CE</td>
+                        <td>₹25661.65</td>
+                        <td>₹25517.05</td>
+                        <td>₹205.29</td>
+                        <td>₹328.47</td>
+                        <td class="positive">+₹9238.19</td>
+                        <td class="win">WIN</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2025-09-22</td>
+                        <td style="color: #00ff88">LONG CE</td>
+                        <td>₹25238.10</td>
+                        <td>₹25202.35</td>
+                        <td>₹201.90</td>
+                        <td>₹186.72</td>
+                        <td class="negative">₹-1518.96</td>
+                        <td class="neutral">EXIT</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2025-10-24</td>
+                        <td style="color: #00ff88">LONG CE</td>
+                        <td>₹25935.10</td>
+                        <td>₹25795.15</td>
+                        <td>₹207.48</td>
+                        <td>₹322.99</td>
+                        <td class="positive">+₹11550.92</td>
+                        <td class="neutral">EXIT</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2026-01-02</td>
+                        <td style="color: #00ff88">LONG CE</td>
+                        <td>₹26155.10</td>
+                        <td>₹26328.55</td>
+                        <td>₹209.24</td>
+                        <td>₹334.79</td>
+                        <td class="positive">+₹12554.45</td>
+                        <td class="win">WIN</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2026-03-05</td>
+                        <td style="color: #ff4757">SHORT PE</td>
+                        <td>₹24615.95</td>
+                        <td>₹24765.90</td>
+                        <td>₹196.93</td>
+                        <td>₹236.31</td>
+                        <td class="negative">₹-4923.19</td>
+                        <td class="loss">LOSS</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="section">
-            <h2> Analysis & Recommendations</h2>
+            <h2>🔍 Analysis & Recommendations</h2>
             <div style="line-height: 1.8; color: #ccc;">
-                <p><strong style="color: #ff4757;">⚠️ Strategy Performance:</strong> The strategy generated a -1.03% return over the 4+ year period with only 9 trades, indicating low trade frequency.</p>
+                <p><strong style="color: #00ff88;">✅ Strategy Performance:</strong> The strategy generated a 28.54% return over the period with 6 trades.</p>
                 <br>
                 <p><strong>Key Observations:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>Low win rate (11.1%) but favorable risk/reeward ratio (1:3)</li>
-                    <li>Only 1 winning trade out of 9 total trades</li>
-                    <li>Maximum drawdown was limited to -1.38%, showing good risk control</li>
-                    <li>Low trade frequency may indicate overly strict entry criteria</li>
+                    <li>Low win rate (33.3%) with favorable risk/reward profile</li>
+                    <li>2 winning trades out of 6 total trades</li>
+                    <li>Maximum drawdown was limited to -3.69%, showing good risk control</li>
+                    <li>Low trade frequency may indicate strict entry criteria</li>
                 </ul>
                 <br>
                 <p><strong style="color: #00d9ff;">💡 Recommendations:</strong></p>
                 <ul style="margin-left: 20px; margin-top: 10px;">
                     <li>Consider reducing volume threshold to generate more signals</li>
                     <li>Test different VP lookback periods (try 10-15 bars)</li>
-                    <li>Consider tighter stop-loss (1-1.5%) to reduce loss per trade</li>
+                    <li>Current stop-loss to reduce loss per trade</li>
                     <li>Add additional confirmation indicators (RSI, MACD)</li>
-                    <li>Test on individual Nifty constituents for more opportunities</li>
+                    <li>Consider implementing trailing stop-loss for winning trades</li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <script>
-        // Trade data from backtest
-        const trades = [
-            {"date": "2022-03-07", "type": "SHORT", "entry": 209.85, "exit": 214.05, "pnl": -167.92, "outcome": "LOSS"},
-            {"date": "2022-06-17", "type": "LONG", "entry": 189.95, "exit": 186.15, "pnl": -151.96, "outcome": "LOSS"},
-            {"date": "2022-11-03", "type": "LONG", "entry": 202.50, "exit": 206.55, "pnl": 161.96, "outcome": "WIN"},
-            {"date": "2023-03-06", "type": "SHORT", "entry": 196.85, "exit": 200.80, "pnl": -157.96, "outcome": "LOSS"},
-            {"date": "2023-06-19", "type": "LONG", "entry": 214.50, "exit": 210.21, "pnl": -171.72, "outcome": "LOSS"},
-            {"date": "2023-10-11", "type": "SHORT", "entry": 232.85, "exit": 237.50, "pnl": -185.96, "outcome": "LOSS"},
-            {"date": "2024-04-22", "type": "LONG", "entry": 258.50, "exit": 253.33, "pnl": -206.68, "outcome": "LOSS"},
-            {"date": "2024-09-18", "type": "SHORT", "entry": 288.85, "exit": 294.65, "pnl": -231.96, "outcome": "LOSS"},
-            {"date": "2025-02-04", "type": "LONG", "entry": 318.50, "exit": 312.13, "pnl": -255.72, "outcome": "LOSS"}
-        ];
-
-        const tbody = document.getElementById('trade-log');
-        trades.forEach((trade, index) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${trade.date}</td>
-                <td style="color: ${trade.type === 'LONG' ? '#00ff88' : '#ff4757'}">${trade.type}</td>
-                <td>₹${trade.entry.toFixed(2)}</td>
-                <td>₹${trade.exit.toFixed(2)}</td>
-                <td style="color: ${trade.pnl >= 0 ? '#00ff88' : '#ff4757'}">${trade.pnl >= 0 ? '+' : ''}₹${trade.pnl.toFixed(2)}</td>
-                <td class="${trade.outcome === 'WIN' ? 'win' : 'loss'}">${trade.outcome}</td>
-            `;
-            tbody.appendChild(row);
-        });
-    </script>
 </body>
 </html>

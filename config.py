@@ -4,9 +4,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
+    # Alpaca API (legacy support)
     API_KEY = os.getenv("API_KEY")
     API_SECRET = os.getenv("API_SECRET")
     BASE_URL = os.getenv("BASE_URL")
+
+    # Dhan API Configuration
+    DHAN_ACCESS_TOKEN = os.getenv("DHAN_ACCESS_TOKEN")
+    DHAN_CLIENT_ID = os.getenv("DHAN_CLIENT_ID")
+    DHAN_BASE_URL = os.getenv("DHAN_BASE_URL", "https://api.dhan.co")
+
     SYMBOL = os.getenv("SYMBOL", "AAPL")
     TIMEFRAME = os.getenv("TIMEFRAME", "5Min")
     

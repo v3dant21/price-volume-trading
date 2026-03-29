@@ -2,13 +2,19 @@ import time
 import pandas as pd
 from config import Config
 from strategy import Strategy
-from broker import MockBroker, AlpacaBroker
+from broker import MockBroker, AlpacaBroker, DhanBroker
 
 def main():
-    # Switch to AlpacaBroker for live trading
-    broker = MockBroker() 
+    # Use DhanBroker for real-time data from Dhan API
+    # Falls back to MockBroker if Dhan credentials not available
+    if Config.DHAN_ACCESS_TOKEN:
+        broker = DhanBroker()
+    else:
+        print("⚠️  DHAN_ACCESS_TOKEN not set. Using MockBroker.")
+        broker = MockBroker()
+
     strategy = Strategy()
-    
+
     print(f"🚀 Starting Volume Node Strategy on {Config.SYMBOL}")
     
     while True:
